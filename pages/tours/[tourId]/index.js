@@ -1,6 +1,6 @@
 import style from "@/styles/Tours.module.css"
 import Image from "next/image"
-import tours from "@/data/tours"
+import tours from "../../../data/tours"
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 import ActivitySlider from "./ActivitySlider"
 import Link from "next/link"
