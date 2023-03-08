@@ -1,0 +1,890 @@
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+/* ///////////////////////////////////////////////////////////////////  Initial Hero  ////////////////////////////////////////////////////////////////////// */
+.initHero {
+  position: relative;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.initHero__imgContainer{
+  width: 100%;
+  height: 100%;
+  /* filter: brightness(0.75); */
+  overflow: hidden;
+}
+.initHero__imgContainer::-webkit-scrollbar {
+  display: none;
+}
+.initHero__imgsSlider{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition: .5s linear;
+  overflow: hidden;
+}
+.initHero__img {
+  position: absolute;
+  min-width: 100%;
+  max-width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+  overflow: hidden;
+}
+.initHero__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* transform: scale(1.1);
+  opacity: 0.5;
+  animation: imgEnter 5s ease-in-out; */
+}
+/* @keyframes imgEnter{
+  0%{
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  10%{
+    opacity: 1;
+  }
+  90%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+} */
+
+.initHero__textContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 100px;
+  color: #fff;
+  z-index: 1;
+}
+.initHero__text{
+  max-width: 60%;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 20px;
+}
+
+
+.initHero__progContainer{
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.initHero__prog{
+  flex: 1;
+  height: 100%;
+  
+}
+.initHero__prog__outer{
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.initHero__prog__inner{
+  height: 100%;
+  background-color: #fdbc00;
+  border-radius: 10px;
+}
+.prog_active{
+  width: 100%;
+}
+.initHero__skip{
+  position: absolute;
+  z-index: 1;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.initHero__skipBtn{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* clip-path: polygon(50% 0, 95% 20%, 100% 50%, 95% 80%, 50% 100%, 5% 80%, 0% 50%, 5% 20%); */
+  color: #fff;
+  font-size: 3rem;
+  text-transform: lowercase;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+  transition: .3s;
+}
+.slider__prev{
+  background: linear-gradient(to left, #00000000, #fdbc00 );
+  opacity: .5;
+}
+.slider__next{
+  background: linear-gradient(to right, #00000000, #fdbc00 );
+  opacity: .5;
+}
+.initHero__skipBtn:hover{
+  background-color: #fdbc00;
+  opacity: 1;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.hero{
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 250px 50px;
+  overflow: hidden;
+  position: relative;
+}
+.hero__img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  filter: brightness(0.65);
+  animation: heroEnter 1s ease-in-out;
+}
+.hero__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@keyframes heroEnter{
+  0%{
+    scale: 1.5;
+  }
+  100%{
+    scale: 1;
+  }
+}
+
+.hero__text{
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: fit-content;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #fff;
+}
+.hero__text__title{
+  font-size: 8rem;
+  font-weight: 600;
+  line-height: 8rem;
+  margin-bottom: 100px;
+}
+.hero__text__desc{
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+.hero__text__descBtn{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+.hero__text__descBtn:hover{
+  color: #fdbc00;
+  transform: translateX(10px);
+}
+
+
+/* ///////////////////////////////////////////////////////////////// Adventures //////////////////////////////////////////////////////////////// */
+
+.adventures {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.adventures h1{
+  max-width: 55%;
+  text-align: center;
+  font-size: 6rem;
+  line-height: 6rem;
+  font-weight: 600;
+  /* letter-spacing: 0.1rem; */
+  margin: 120px 0;
+}
+
+.adventures_cardsContainer{
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.adventures__cardsHolder{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.left{
+  align-items: flex-start;
+}
+.right{
+  align-items: flex-end;
+}
+.adventures_card{
+  position: relative;
+  overflow: hidden;
+}
+.adventures__cardImg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: .3s;
+}
+.adventures_card:hover .adventures__cardImg{
+  transform: scale(1.1);
+}
+.adventures__cardImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.left > .adventures_card:nth-of-type(even){
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+.left > .adventures_card:nth-of-type(odd){
+  height: 680px;
+  width: 70%;
+  overflow: hidden;
+}
+.right > .adventures_card:nth-of-type(odd){
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+.right > .adventures_card:nth-of-type(even){
+  height: 680px;
+  width: 70%;
+  overflow: hidden;
+}
+
+.adventures__cardInfo{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  color: #fff;
+  padding: 30px;
+  cursor: pointer;
+  transition: .3s;
+}
+.adventures__cardInfo:hover {
+  backdrop-filter: brightness(.7);
+}
+.adventures__cardInfo:hover p{
+  transform: translateX(-65px);
+}
+.adventures__cardInfo:hover h2{
+  transform: translateX(-30px);
+}
+.adventures__cardInfo:hover span{
+  transform: translateX(0);
+}
+.adventures__cardInfo p{
+  font-size: 1.5rem;
+  width: fit-content;
+  position: relative;
+  transition: .3s;
+}
+.adventures__cardInfo h2{
+  flex: 1;
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 3rem;
+  transition: .3s;
+}
+.adventures__cardInfo span{
+  width: fit-content;
+  position: relative;
+  transform: translateX(65px);
+  transition: .3s;
+}
+
+/* ///////////////////////////////////////////////////////////////// Travel Tip //////////////////////////////////////////////////////////////// */
+
+.tips {
+  margin-top: 100px;
+  padding: 0 0 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.tips h1{
+  max-width: 40%;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 300;
+  /* letter-spacing: 0.1rem; */
+  margin: 50px 0;
+}
+.tips__cardsContainer{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 100px;
+}
+
+.tips__card{
+  position: relative;
+  width: 350px;
+  height: 450px;
+  background: linear-gradient(135deg, #fdbc00 60%, #c79500 100%);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 30px;
+  cursor: pointer;
+  transition: .3s;
+}
+.tips__card:hover{
+  /* scale: 1.1; */
+  transform: rotateX(25deg) rotateZ(5deg) translateY(-30px) ;
+}
+.tips__card__tr{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 25px solid #fff;
+  border-right: 25px solid #fff;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid transparent;
+  box-shadow: -5px 5px 5px #00000022;
+  border-bottom-left-radius: 5px;
+}
+.tips__card__bl{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #fff;
+  border-left: 50px solid #fff;
+  box-shadow: 5px -5px 5px #00000022;
+  border-top-right-radius: 5px;
+}
+.tips__cardContent{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #000;
+}
+.tips__cardContent p{
+  font-size: .9rem;
+}
+
+.tips__more{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.tips__moreBtn{
+  margin-top: 50px;
+  font-weight: bold;
+  width: fit-content;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 99999px;
+  border: 2px solid #fdbc00;
+  color: #fdbc00;
+  transition: .3s;
+}
+.tips__moreBtn:hover{
+  background: #fdbc00;
+  color: #fff;
+}
+
+/* ////////////////////// Tip Modal //////////////////// */
+
+.tip__modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 200px 30px 100px;
+  overflow-y: auto;
+  background-color: #00000099;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  z-index: 999999;
+}
+.tip__modal::-webkit-scrollbar{
+  display: none;
+}
+.tip__modalContainer{
+  position: relative;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 70px;
+  /* transition: .3s; */
+}
+.tip__modal__close{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: #fdbc00;
+  color: #fff;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+.tip__modalContent h2{
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  margin-bottom: 20px;
+}
+
+
+.facil__modalContent h2{
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  margin-bottom: 20px;
+}
+.facil__modalContent h3{
+  font-weight: bold;
+}
+.facil__modalContent p{
+  font-size: .9rem;
+  line-height: 1.5rem;
+  margin-bottom: 20px;
+}
+
+
+
+/* ///////////////////////////////////////////////// Pictures ////////////////////////////////////////////////// */
+.pics{
+  margin-top: 100px;
+  padding: 0 0 50px;
+  width: 100%;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.pics h1{
+  max-width: 60%;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 300;
+  font-style: italic;
+  /* letter-spacing: 0.1rem; */
+  margin: 80px 0 0;
+}
+
+.embla{
+  width: 95%;
+  overflow: hidden;
+  position: relative;
+  /* background-color: red; */
+}
+.embla__container {
+  height: 100%;
+  display: flex;
+}
+.embla__slide {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.pics__container{
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.pic_card{
+  width: 350px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 10px #00000044;
+  cursor: pointer;
+  transition: .3s;
+}
+.pic_card:nth-last-of-type(1){
+  transform: rotateZ(15deg);
+}
+.pic_card:nth-last-of-type(2){
+  transform: rotateZ(-5deg);
+  margin-left: -50px;
+}
+.pic_card:nth-last-of-type(3){
+  transform: rotateZ(-25deg);
+}
+.pic_card:hover{
+  transform: translateY(-10px) rotate(0deg);
+  z-index: 100;
+  scale: 1.1;
+}
+.pic_card img{
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+}
+.pic_card p{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Freehand', cursive;
+  font-size: 1.5rem;
+  color: #000;
+}
+.pics__more{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.pics__moreBtn{
+  margin-top: 50px;
+  font-weight: bold;
+  width: fit-content;
+  padding: 10px 30px;
+  background: #fff;
+  border-radius: 3px;
+  border: 2px solid #fdbc00;
+  color: #fdbc00;
+  transition: .3s;
+}
+.pics__moreBtn:hover{
+  background: #fdbc00;
+  color: #fff;
+}
+
+/* ////////////////////// Pic Modal //////////////////// */
+
+.pic__modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+  background-color: #00000099;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+.pic__modal::-webkit-scrollbar{
+  display: none;
+}
+.pic__modalContainer{
+  position: relative;
+  max-width: 500px;
+  max-height: 500px;
+  background: #fff;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  /* transition: .3s; */
+}
+.pic__modal__close{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: #fdbc00;
+  color: #fff;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+.pic__modalContent{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.pic__modalContent img{
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+}
+.pic__modalContent p{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Freehand', cursive;
+  color: #000;
+}
+
+  
+
+/*///////////////////////////////////////////////////////////////////// @media queries //////////////////////////////////////////////////////////////*/ 
+
+
+@media only screen and (max-width: 599px){
+  .initHero__textContainer{
+    padding: 0 20px;
+  }
+  .initHero__text{
+    max-width: 100%;
+    font-size: 1rem;
+  }
+  .initHero__skip{
+    bottom: 100px;
+    transform: translateY(0);
+  }
+  .initHero__skipBtn{
+    width: 50px;
+    height: 50px;
+    font-size: 1;
+  }
+  .hero{
+    min-height: 100vh;
+    padding: 200px 20px 0;
+  }
+  .hero__text{
+    max-width: 100%;
+  }
+  .hero__text__title{
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 50px;
+  }
+  .hero__text__desc{
+    font-size: .9rem;
+    line-height: 1.3rem;
+  }
+  .adventures h1{
+    font-size: 2.5rem;
+    line-height: 3rem;
+    max-width: 90%;
+    margin-bottom: 50px;
+  }
+  .adventures_cardsContainer{
+    flex-direction: column;
+  }
+  .left > .adventures_card:nth-of-type(even){
+    height: 350px;
+    width: 100%;
+  }
+  .left > .adventures_card:nth-of-type(odd){
+    height: 350px;
+    width: 100%;
+  }
+  .right > .adventures_card:nth-of-type(odd){
+    height: 350px;
+    width: 100%;
+  }
+  .right > .adventures_card:nth-of-type(even){
+    height: 350px;
+    width: 100%;
+  }
+  .adventures__cardInfo h2{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  .tips h1{
+    font-size: 2.5rem;
+    line-height: 3rem;
+    max-width: 90%;
+    margin-bottom: 50px;
+  }
+  .tips__cardsContainer{
+    padding: 0 20px;
+  }
+  .tips__card{
+    height: auto;
+    padding-bottom: 130px;
+  }
+
+  .tip__modal{
+    padding: 100px 30px;
+  }
+  .pic__modalContent p{
+    font-size: 1.2rem;
+  }
+  .tip__modalContainer{
+    max-width: 300px;
+    padding: 30px;
+  }
+
+  .pics h1{
+    font-size: 2.5rem;
+    line-height: 3rem;
+    max-width: 90%;
+    /* margin-bottom: 50px; */
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px){
+  .initHero__textContainer{
+    padding: 0 20px;
+  }
+  .initHero__text{
+    max-width: 100%;
+    font-size: 2rem;
+  }
+  .initHero__skip{
+    bottom: 100px;
+    transform: translateY(0);
+  }
+  .initHero__skipBtn{
+    width: 80px;
+    height: 80px;
+    font-size: 1;
+  }
+  .hero__text{
+    max-width: 100%;
+  }
+  .hero__text__title{
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .left > .adventures_card:nth-of-type(even){
+    height: 250px;
+    width: 100%;
+  }
+  .left > .adventures_card:nth-of-type(odd){
+    height: 400px;
+    width: 80%;
+  }
+  .right > .adventures_card:nth-of-type(odd){
+    height: 250px;
+    width: 100%;
+  }
+  .right > .adventures_card:nth-of-type(even){
+    height: 400px;
+    width: 80%;
+  }
+  .adventures__cardInfo h2{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  .adventures__cardInfo p{
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1000px){
+  .initHero__skip{
+    bottom: 100px;
+    transform: translateY(0);
+  }
+  .initHero__skipBtn{
+    width: 80px;
+    height: 80px;
+    font-size: 1;
+  }
+  .hero__text{
+    max-width: 100%;
+  }
+  .hero__text__title{
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .left > .adventures_card:nth-of-type(even){
+    height: 300px;
+    width: 100%;
+  }
+  .left > .adventures_card:nth-of-type(odd){
+    height: 500px;
+    width: 80%;
+  }
+  .right > .adventures_card:nth-of-type(odd){
+    height: 300px;
+    width: 100%;
+  }
+  .right > .adventures_card:nth-of-type(even){
+    height: 500px;
+    width: 80%;
+  }
+}

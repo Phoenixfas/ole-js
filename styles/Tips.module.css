@@ -1,0 +1,170 @@
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.hero{
+    /* background-color: #000; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    transform: translateY(30%);
+    overflow: hidden;
+    z-index: 1;
+    filter: brightness(0.65);
+    animation: heroEnter 1s ease-in-out;
+  }
+  @keyframes heroEnter{
+    0%{
+      scale: 1.5;
+    }
+    100%{
+      scale: 1;
+    }
+  }
+  .hero__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero__text{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    padding:  50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  .hero__text__title{
+    max-width: 60%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3rem;
+  }
+  /* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+  .tipslist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .tipslist__menu{
+    display: flex;
+    align-items: center;
+  }
+  .tipslist__menu__item{
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    font-weight: 600;
+    color: #000;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .active__menu{
+    background-color: #fdbc00;
+    color: #fff;
+  }
+  .active__menu_fac{
+    background-color: #000;
+    color: #fff;
+  }
+  .tipslist__cardsContainer{
+    max-width: 1000px;
+    padding: 30px;
+    background-color: #fdbc00;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    transition: .3s;
+  }
+  .black{
+    background-color: #000;
+  }
+  .black .tipslist__card:hover{
+    box-shadow: 10px 10px 10px #ffffff55;
+  }
+  .tipslist__card{
+    width: 290px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  .tipslist__card:hover{
+    scale: 1.1;
+    box-shadow: 10px 10px 10px #00000055;
+  }
+  .tipslist__card__content h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .tipslist__card__content p{
+    font-size: .9rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .facillist_content h1{
+    font-size: 1.2rem;
+  }
+
+  
+  
+/*///////////////////////////////////////////////////////////////////// @media queries //////////////////////////////////////////////////////////////*/ 
+
+
+@media only screen and (max-width: 599px){
+  .hero{
+    height: 500px;
+  }
+  .tipslist__menu__item{
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .hero__text{
+    padding:  20px;
+  }
+  .hero__text__title{
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px){
+  .hero{
+    height: 500px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1000px){
+  .hero{
+    height: 500px;
+  }
+}
