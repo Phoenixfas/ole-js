@@ -2,7 +2,7 @@ import style from '@/styles/Tours.module.css'
 import { useState } from "react"
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 import Image from "next/image"
-import tours from "@/data/tours"
+import tours from "@/data/tour"
 
 export default function Book() {
     const [name, setName] = useState("")

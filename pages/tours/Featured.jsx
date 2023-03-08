@@ -1,6 +1,6 @@
 import style from '@/styles/Tours.module.css'
 import Image from 'next/image'
-import tours from '@/data/tours'
+import tours from '@/data/tour'
 import Link from 'next/link'
 
 export default function Featured() {

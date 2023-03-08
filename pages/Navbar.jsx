@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { useAppSelector } from '@/redux/hooks'
 import { motion } from 'framer-motion'
-import tours from '@/data/tours'
+import tours from '@/data/tour'
 
 export default function Navbar() {
     const router = useRouter()

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import style from '@/styles/Home.module.css'
 import React from 'react'
 import { BsArrowRight } from 'react-icons/bs'
-import tours from '@/data/tours'
+import tours from '@/data/tour'
 import Link from 'next/link'
 
 export default function Adventures() {

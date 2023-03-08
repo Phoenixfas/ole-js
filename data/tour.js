@@ -21,6 +21,9 @@ const tours = [
                 Finish the day with shopping in merkato, the local marketplace which is said to be Africa’s largest open-air market.`
             }
         ],
+        nb: "",
+        included: [],
+        not_included: []
     },
     {
         id: 2,
@@ -50,6 +53,9 @@ const tours = [
                 localities are mining salt. 1,200 km2 (460 sq mi) the Afar Depression is covered by salt, and salt Look the activity of breaking the salt from the ground, local people are cutting in to rectangular pieces and loading on camels. You drive ahead to Dallol and visit the difference landscape formed by volcanic activity; Dallol + Lake Assal + salt canon, camel caravans, follow up camel caravans and drive back to Hamedela and proceed to Mekele.`
             },
         ],
+        nb: "",
+        included: [],
+        not_included: []
     },
     {
         id: 3,
@@ -83,6 +89,9 @@ const tours = [
                 description: `In the morning, visit the nearby monastery of Na’akutoLa’ab, set on the side of a cliff.  After the visit, proceed to the airport for the return flight back to Addis Ababa.`
             },
         ],
+        nb: "",
+        included: [],
+        not_included: []
     },
     {
         id: 4,
@@ -141,7 +150,9 @@ const tours = [
                 description: `After breakfast, depart north to Addis Ababa.  On the way, you may visit the Abiatta-Shala National Park.  Lake Shala, with its deep blue waters is the deepest lake in Ethiopia at 236m.  Lake Abiatta is a soda lake at which thousands of flamingos can be seen at various times of the year.`
             },
         ],
-        nb: "*** This itinerary is flexible, and will likely change in order to coordinate visits with market days in the south, which is a great opportunity to mingle with the people, many of whom travel long distances on foot to attend."
+        nb: "*** This itinerary is flexible, and will likely change in order to coordinate visits with market days in the south, which is a great opportunity to mingle with the people, many of whom travel long distances on foot to attend.",
+        included: [],
+        not_included: []
     },
     {
         id: 5,
@@ -170,6 +181,9 @@ const tours = [
                 localities are mining salt. 1,200 km2 (460 sq mi) the Afar Depression is covered by salt, and salt Look the activity of breaking the salt from the ground, local people are cutting in to rectangular pieces and loading on camels. You drive ahead to Dallol and visit the difference landscape formed by volcanic activity; Dallol + Lake Assal + salt canon, camel caravans, follow up camel caravans and drive back to Hamedela and proceed to Mekele.`
             },
         ],
+        nb: "",
+        included: [],
+        not_included: []
     },
     {
         id: 6,

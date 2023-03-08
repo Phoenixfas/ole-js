@@ -7,6 +7,7 @@ import activePicReducer from "./activePicSlice";
 import headerColorToggleReducer from "./headerColorToggleSlice";
 import activeFacilReducer from "./activeFacilSlice";
 import facilModalToggleReducer from "./facilModalToggleSlice";
+import activeTourReducer from "./activeTourSlice";
 
 export const rootReducer = combineReducers({
   initHeroToggle: initHeroToggleReducer,
@@ -17,6 +18,7 @@ export const rootReducer = combineReducers({
   headerColorToggle: headerColorToggleReducer,
   activeFacil: activeFacilReducer,
   facilModalToggle: facilModalToggleReducer,
+  activeTour: activeTourReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
