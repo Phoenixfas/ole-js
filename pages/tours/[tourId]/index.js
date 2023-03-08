@@ -37,7 +37,7 @@ const Tour = () => {
             setT(tour);
             dispatch(changeActiveTour(tour));
         }
-    }, [tourId])
+    }, [tourId, dispatch])
 
     if (!t) return (
         <div className={style.main}>
