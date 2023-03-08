@@ -5,11 +5,9 @@ export default function Document() {
     <Html lang="en">
       <Head>
           <meta charSet="UTF-8" />
-          <title>One Love Ethiopia | Tour & Car Rent</title>
           <meta name="description" content="One Love Ethiopia is a reputable tour and car rental company based in Ethiopia. With a focus on customer satisfaction, we offer a wide range of services including guided tours, airport transfers, and car rental services" />
           <meta name="keywords" content="Ethiopia, travelling, tour, hike, tourism" />
           <meta name="author" content="One Love Ethiopia" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <link rel="canonical" href="https://www.Oneloveethiopiatours.com/" />
           {/* <!-- Add Open Graph tags for social media sharing --> */}
           <meta property="og:title" content="One Love Ethiopia | Tour & Car Rent" />

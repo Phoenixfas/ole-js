@@ -27,7 +27,7 @@ export default function Hero() {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
-      }, []);
+      }, [dispatch]);
 
   return (
     <div ref={elementRef} className={style.hero}>

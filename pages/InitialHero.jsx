@@ -88,7 +88,7 @@ export default function InitialHero() {
             window.removeEventListener('scroll', handleScroll);
         }
 
-    }, [disable])
+    }, [disable, dispatch])
     
 
   return (

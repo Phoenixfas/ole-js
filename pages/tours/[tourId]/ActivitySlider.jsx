@@ -46,7 +46,7 @@ export default function ActivitySlider({tour}) {
             window.removeEventListener('keydown', handleKeyDown)
             clearInterval(interval);
         }
-    }, [currentSlide])
+    }, [currentSlide, nextSlide, prevSlide])
 
   return (
     <div  className={style.slider}>

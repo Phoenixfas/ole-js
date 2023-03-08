@@ -5,10 +5,17 @@ import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 import ActivitySlider from "./ActivitySlider"
 import Link from "next/link"
 import { useRouter } from "next/router"
+import Head from "next/head"
 
 export default function page() {
     return(
-        <Tour />
+        <>
+            <Head>
+                <title>One Love Ethiopia | Tours</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
+            <Tour />
+        </>
     )
 }
 

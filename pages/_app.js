@@ -1,8 +1,8 @@
 import '@/styles/globals.css'
 import Navbar from './Navbar'
 import { Provider } from 'react-redux'
-import { store, persistor } from '../redux/store'
-import { PersistGate } from 'redux-persist/integration/react'
+import { store } from '../redux/store'
+// import { PersistGate } from 'redux-persist/integration/react'
 import React from 'react'
 import Footer from './Footer'
 import TipModal from './TipModal'
@@ -13,14 +13,14 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Provider store={store}>
-          <PersistGate loading={null} persistor={persistor} >
+          {/* <PersistGate loading={null} persistor={persistor} > */}
               <Navbar />
               <TipModal />
               <FacilModal />
               <PicModal />
               <Component {...pageProps} />
               <Footer />
-          </PersistGate>
+          {/* </PersistGate> */}
       </Provider>
     </>
   )
